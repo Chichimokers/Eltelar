@@ -1,0 +1,73 @@
+/* Estilos globales para la aplicación con tema oscuro */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Estilos para el body */
+body{
+  
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #1a1a1a; /* Fondo oscuro */
+  color: white; /* Texto claro */
+}
+
+/* Estilos para los encabezados */
+h1, h2, h3, h4, h5, h6 {
+  color: white; /* Color claro para encabezados */
+}
+
+/* Estilos para los párrafos */
+p {
+  color: white; /* Color gris claro para texto */
+  line-height: 1.6;
+}
+
+/* Estilos para los enlaces */
+a {
+  color: #4db8ff; /* Color azul claro para enlaces */
+  text-decoration: none;
+}
+
+a:hover {
+  color: #80ccff; /* Color más claro al pasar el mouse */
+}
+
+/* Estilos para los botones */
+button {
+  background-color: #333; /* Fondo oscuro para botones */
+  color: #fff; /* Texto blanco */
+  border: 1px solid #444; /* Borde gris oscuro */
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #444; /* Fondo más claro al pasar el mouse */
+}
+
+/* Estilos para las tarjetas de tela */
+.card {
+  background-color: #2b2b2b; /* Fondo de tarjeta oscuro */
+  border: 1px solid #444; /* Borde gris oscuro */
+  border-radius: 8px;
+  padding: 20px;
+  margin: 10px 0;
+}
+
+/* Estilos para el encabezado */
+header {
+  background-color: #222; /* Fondo más oscuro para el encabezado */
+  color: #fff;
+  padding: 20px;
+}
+
+/* Estilos para el pie de página */
+footer {
+  background-color: #222; /* Fondo más oscuro para el pie de página */
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}

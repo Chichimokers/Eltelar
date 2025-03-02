@@ -1,0 +1,30 @@
+<div class="flex justify-center items-center h-screen">
+  <div class="bg-[#2b2b2b] border border-[#444] rounded-lg shadow-lg overflow-hidden w-full max-w-md p-6">
+    <h2 class="text-2xl font-bold text-white mb-4">Iniciar Sesión</h2>
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+      <div class="mb-4">
+        <label for="username" class="block text-white font-bold mb-2">Nombre de Usuario:</label>
+        <input type="text" id="username" formControlName="username"
+               class="bg-[#444] text-white px-4 py-2 rounded w-full focus:outline-none focus:ring focus:ring-[#4db8ff]"
+               placeholder="Ingresa tu nombre de usuario">
+        <div *ngIf="loginForm.get('username')?.invalid && loginForm.get('username')?.touched" class="text-red-500">
+          El nombre de usuario es requerido.
+        </div>
+      </div>
+      <div class="mb-4">
+        <label for="password" class="block text-white font-bold mb-2">Contraseña:</label>
+        <input type="password" id="password" formControlName="password"
+               class="bg-[#444] text-white px-4 py-2 rounded w-full focus:outline-none focus:ring focus:ring-[#4db8ff]"
+               placeholder="Ingresa tu contraseña">
+        <div *ngIf="loginForm.get('password')?.invalid && loginForm.get('password')?.touched" class="text-red-500">
+          La contraseña es requerida.
+        </div>
+      </div>
+      <button type="submit"
+              [disabled]="loginForm.invalid"
+              class="bg-[#4db8ff] text-white px-4 py-2 rounded w-full hover:bg-[#2d97d6]">
+        Iniciar Sesión
+      </button>
+    </form>
+  </div>
+</div>

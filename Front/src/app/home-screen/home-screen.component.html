@@ -1,0 +1,15 @@
+<app-navbar></app-navbar>
+
+<div *ngIf="isHomePage(); else otherPage">
+  <app-carrosuel></app-carrosuel>
+</div>
+
+<ng-template #otherPage>
+  <!-- Contenido para otras páginas -->
+</ng-template>
+
+<div class="container mx-auto my-8 flex flex-wrap justify-center gap-4">
+  <router-outlet></router-outlet>
+</div>
+
+<app-footer></app-footer>

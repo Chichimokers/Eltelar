@@ -1,0 +1,39 @@
+<table class="table table-pin-cols" style="border-style: ridge;border: chocolate; margin: auto; border-style:ridge; border-radius: 200em;">
+    <div *ngFor="let item of Datos" class="table-row " style="
+
+     display: flex;
+     flex-direction: inherit;;
+    border-right-width: 0px;
+    border-left-width: 0px;
+    border-top-width: 0px;
+    border-bottom-color: chocolate;
+    padding: 10px;
+    border-style: ridge;
+    border-bottom-width: 3px;">
+
+      <h1 style="
+      border-right:chocolate ;
+      padding: 12px;
+      border-style : ridge;
+      margin-top: -11px;
+      margin-bottom: -11px;   ">{{item.fecha}}</h1>
+
+       <h5 style="
+       border-right:chocolate;
+      padding: 15px;
+      border-style : ridge ;
+      margin-top: -11px;
+      margin-bottom: -11px;">{{item.IP}}</h5>
+
+    <h5 style="
+    border-right:chocolate;
+    padding: 15px;
+    border-style : ridge;
+     margin-top: -11px;
+      margin-bottom: -11px;" >{{item.hora}}</h5>
+
+    <h5 style="padding: 10px;">{{item.MAC}}</h5>
+
+    </div>
+
+</table>

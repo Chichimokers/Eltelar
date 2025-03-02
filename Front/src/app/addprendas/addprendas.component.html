@@ -1,0 +1,65 @@
+<div class="flex justify-center items-center h-screen">
+  <div class="bg-[#2b2b2b] border border-[#444] rounded-lg shadow-lg overflow-hidden w-full max-w-md p-6">
+    <h2 class="text-2xl font-bold text-white mb-4">Añadir Nuevo Elemento</h2>
+    <form [formGroup]="itemForm" (ngSubmit)="onSubmit()">
+
+      <div class="mb-4">
+        <label for="nombre" class="block text-white font-bold mb-2">Nombre:</label>
+        <input type="text" id="nombre" formControlName="nombre"
+               class="bg-[#444] text-white px-4 py-2 rounded w-full focus:outline-none focus:ring focus:ring-[#4db8ff]"
+               placeholder="Ingresa el nombre">
+      </div>
+
+      <div class="mb-4">
+        <label for="precio" class="block text-white font-bold mb-2">Precio:</label>
+        <input type="text" id="precio" formControlName="precio"
+               class="bg-[#444] text-white px-4 py-2 rounded w-full focus:outline-none focus:ring focus:ring-[#4db8ff]"
+               placeholder="Ingresa el precio">
+      </div>
+      <div class="mb-4">
+
+      <label for="tipo" class="block text-white font-bold mb-2">Tipo:</label>
+      <select id="tipo" formControlName="tipo" class="bg-[#444] text-white px-4 py-2 rounded w-full focus:outline-none focus:ring focus:ring-[#4db8ff]">
+        <option value="Licra">Licra</option>
+        <option value="Vestido">Vestido</option>
+        <option value="Saya">Saya</option>
+        <option value="Pulover">Pulover</option>
+        <option value="Blusas">Blusas</option>
+        <option value="Short">Short</option>
+        <option value="Calsones">Calsones</option>
+        <option value="Trusa">Trusa</option>
+        <option value="Camisa">Camisa</option>
+        <option value="Camisa">Camisa</option>
+        <!-- Agrega más opciones según sea necesario -->
+      </select>
+    </div>
+    <div class="mb-4">
+      <label for="moneda" class="block text-white font-bold mb-2">Moneda:</label>
+      <select id="moneda" formControlName="moneda" class="bg-[#444] text-white px-4 py-2 rounded w-full focus:outline-none focus:ring focus:ring-[#4db8ff]">
+        <option value="EUR">EUR</option>
+        <option value="EUR">CUP</option>
+        <option value="EUR">USD</option>
+
+        <!-- Agrega más opciones según sea necesario -->
+      </select>
+    </div>
+
+      <div class="mb-4">
+        <label for="fechadeentrada" class="block text-white font-bold mb-2">Fecha de Entrada:</label>
+        <input type="date" id="fechadeentrada" formControlName="fechadeentrada"
+               class="bg-[#444] text-white px-4 py-2 rounded w-full focus:outline-none focus:ring focus:ring-[#4db8ff]">
+      </div>
+
+      <div class="mb-4">
+        <label for="imagen" class="block text-white font-bold mb-2">Imagen:</label>
+        <input type="file" id="imagen" (change)="onFileSelected($event)"
+               class="bg-[#444] text-white px-4 py-2 rounded w-full focus:outline-none focus:ring focus:ring-[#4db8ff]">
+      </div>
+      <button type="submit"
+              [disabled]="itemForm.invalid || !selectedFile"
+              class="bg-[#4db8ff] text-white px-4 py-2 rounded w-full hover:bg-[#2d97d6]">
+        Añadir Elemento
+      </button>
+    </form>
+  </div>
+</div>

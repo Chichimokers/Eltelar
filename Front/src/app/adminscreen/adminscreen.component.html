@@ -1,0 +1,74 @@
+
+<div *ngIf="service.isLoggedIn(); else elsebloc">
+
+<div class="flex h-full">
+  <!-- Sidebar -->
+  <aside class="w-64  bg-gray-800 text-white">
+
+    <div class="p-4">
+      <h2 class="text-lg font-bold">Mi Tienda</h2>
+      <ul class="mt-4">
+        <li class="mb-2">
+
+          <div *ngIf="router.url==='/admin/default';else selected" >
+
+          <a href="/admin/default" class="block p-2 bg-gray-700 rounded">Agregar Telas</a>
+
+          </div>
+
+          <ng-template #selected>
+
+            <a href="/admin/default" class="block p-2 hover:bg-gray-700 rounded">Agregar Telas</a>
+
+          </ng-template>
+
+        </li>
+
+        <li class="mb-2">
+          <div *ngIf="router.url==='/admin/addprendas' ; else selecte2d">
+          <a href="/admin/addprendas" class="block p-2 bg-gray-700 rounded">Agregar Ropa</a>
+
+          </div>
+
+
+
+        <ng-template #selecte2d>
+            <a href="/admin/addprendas" class="block p-2 hover:bg-gray-700 rounded">Agregar Ropa</a>
+          </ng-template>
+        </li>
+
+
+        <li class="mb-2">
+          <div *ngIf="router.url==='/admin/userinfo' ; else selecte3d">
+
+          <a href="/admin/userinfo" class="block p-2 bg-gray-700 rounded">Registros entradas</a>
+
+          </div>
+
+
+
+        <ng-template #selecte3d>
+
+            <a href="/admin/userinfo" class="block p-2 hover:bg-gray-700 rounded">Registros entradas</a>
+        </ng-template>
+
+        </li>
+
+
+      </ul>
+    </div>
+  </aside>
+
+  <!-- Contenido Principal -->
+  <div class="flex-1 p-10">
+    <router-outlet></router-outlet>
+  </div>
+</div>
+</div>
+
+<ng-template #elsebloc>
+>
+  <router-outlet></router-outlet>
+</ng-template>
+
+

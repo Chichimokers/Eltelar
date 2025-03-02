@@ -1,0 +1,29 @@
+<div id="products" class="flex flex-wrap justify-center gap-4">
+  <div  *ngFor="let item of product" class="
+
+  bg-[#2b2b2b] border border-[#444]
+
+  rounded-lg shadow-lg overflow-hidden">
+
+  <a href="{{TelaService.geturl()}}/{{item.imagenUrl}}">
+
+  <img class="w-full h-48 object-cover"  src="{{TelaService.geturl()}}/{{item.imagenUrl}}"  alt="Tela">
+  </a>
+
+    <div class="p-4">
+
+      <h2 class="text-xl font-bold text-white">{{item.nombre}}</h2>
+
+      <p class="text-[#4db8ff] font-semibold mt-4">Precio: {{item.precio}} {{item.moneda}}</p>
+
+      <p class="text-[text-white] mt-4">Tipo:  {{item.tipo}}</p>
+
+    </div>
+
+  <button (click)="comprar(item.nombre)"
+    class="bg-[#4db8ff] text-white px-4 py-2 rounded w-full hover:bg-[#2d97d6]">
+  Comprar
+  </button>
+
+  </div>
+
